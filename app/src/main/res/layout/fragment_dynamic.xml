@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".DynamicFragment"
+    android:orientation="horizontal"
+    android:background="@color/my_fragment_color">
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/fHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:text="Like this Article?"
+        />
+    <RadioGroup
+        android:id="@+id/rGroup1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+
+        android:orientation="horizontal"
+        >
+        <RadioButton
+            android:id="@+id/rB1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/yes"
+            android:padding="10dp"
+            />
+        <RadioButton
+            android:id="@+id/rB2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no"
+            android:padding="10dp"
+
+            />
+    </RadioGroup>
+</LinearLayout>
