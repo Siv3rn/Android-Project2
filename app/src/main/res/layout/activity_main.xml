@@ -64,7 +64,8 @@ tools:context=".MainActivity">
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout="@layout/fragment_dynamic">
+        tools:layout="@layout/fragment_dynamic"
+        android:name="com.example.fragmentexample1updated.DynamicFragment">
 
     </fragment>
 
