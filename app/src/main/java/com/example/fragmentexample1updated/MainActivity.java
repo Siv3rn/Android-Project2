@@ -1,6 +1,10 @@
 package com.example.fragmentexample1updated;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentContainer;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.view.View;
@@ -33,5 +37,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void displayFragment() {
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        DynamicFragment dynamicFragment = DynamicFragment().newInstance;
+
+        fragmentTransaction.add(R.id.dynamicf);
+
     }
 }
