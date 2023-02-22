@@ -34,15 +34,27 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void closeFragment() {
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        DynamicFragment dynamicFragment = (DynamicFragment) fragmentManager.findFragmentById(R.id.dynamicf);
+
+        if (dynamicFragment != null){
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.remove(dynamicFragment).commit();
+
+        }
+
     }
 
     private void displayFragment() {
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        DynamicFragment dynamicFragment = DynamicFragment().newInstance;
+        DynamicFragment dynamicFragment = DynamicFragment().newInstance();
 
-        fragmentTransaction.add(R.id.dynamicf);
+        fragmentTransaction.add(R.id.dynamicf, dynamicFragment).addToBackStack(null).commit();
 
+        display = true;
+        btn1.setText(R.string.close);
     }
 }
